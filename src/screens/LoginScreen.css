@@ -25,6 +25,7 @@
   font-weight: 400;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .loginScreen__gradient {
