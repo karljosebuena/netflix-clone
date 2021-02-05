@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import { selectUser } from '../features/userSlice'
 import { auth } from '../firebase'
 import Nav from '../Nav'
@@ -8,6 +9,12 @@ import './ProfileScreen.css'
 
 function ProfileScreen() {
   const { email } = useSelector(selectUser)
+  const history = useHistory()
+
+  const exit = () => {
+    history.replace('/');
+    return auth.signOut();
+  }
 
   return (
     <div className="profileScreen">
@@ -28,7 +35,7 @@ function ProfileScreen() {
               <Subscription name="NetFlix Basic" definition="420" />
               <Subscription name="NetFlix Premium" definition="4k+HDR" current />
               <button
-                onClick={() => auth.signOut()}
+                onClick={exit}
                 className="profileScreen__signOut"
               >
                 Sign Out
