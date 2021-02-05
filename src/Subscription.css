@@ -1,0 +1,39 @@
+.subscription {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscription:hover {
+  background-color: rgb(32, 32, 32);
+  opacity: 1;
+}
+
+.subscription__plan {
+  color: #BEBEBE
+}
+
+.subscription__plan > h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.subscription__plan > p {
+  font-size: 13px;
+}
+
+.subscription__button {
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.subscription__current {
+  background-color: #808080;
+}
