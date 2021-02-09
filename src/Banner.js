@@ -16,13 +16,12 @@ function Banner() {
           Math.floor(Math.random() * request.data.results.length - 1)
           ]
         )
-        return requests;
       } catch (error) {
         console.log(error)
       }
     }
 
-    fetchData();
+    return fetchData();
   }, []);
 
   function truncate(string, n) {

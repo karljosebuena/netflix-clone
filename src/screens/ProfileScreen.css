@@ -48,14 +48,6 @@
   padding-bottom: 10px;
 }
 
-.profileScreen__plans > h4 {
-  font-size: 15px;
-  font-weight: 600;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  color: #BEBEBE;
-}
-
 .profileScreen__signOut {
   padding: 10px 20px;
   font-size: 1rem;

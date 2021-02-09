@@ -12,13 +12,12 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       try {
         const request = await axios.get(fetchUrl);
         setMovies(request.data.results);
-        return request;
       } catch (error) {
         console.log(error)
       }
     }
 
-    fetchData();
+    return fetchData();
   }, [fetchUrl]);
 
   return (

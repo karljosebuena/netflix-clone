@@ -4,8 +4,8 @@ import { useHistory } from 'react-router-dom'
 import { selectUser } from '../features/userSlice'
 import { auth } from '../firebase'
 import Nav from '../Nav'
-import Subscription from '../Subscription'
 import './ProfileScreen.css'
+import PlanScreen from './PlanScreen'
 
 function ProfileScreen() {
   const { email } = useSelector(selectUser)
@@ -29,11 +29,8 @@ function ProfileScreen() {
           <div className="profileScreen__details">
             <h2>{email}</h2>
             <div className="profileScreen__plans">
-              <h3>Plans (Current Plan: premium)</h3>
-              <h4>Renewal Date: 04/06/2021</h4>
-              <Subscription name="NetFlix Standard" definition="1080p" />
-              <Subscription name="NetFlix Basic" definition="420" />
-              <Subscription name="NetFlix Premium" definition="4k+HDR" current />
+              <h3>Plans</h3>
+              <PlanScreen />
               <button
                 onClick={exit}
                 className="profileScreen__signOut"
